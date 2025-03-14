@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QQAvatarUploader", "QQAvatarUploader\QQAvatarUploader.csproj", "{278CB4BB-8232-43D7-9C8D-A43FDC5CFB47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lagrange.Core", "Lagrange.Core\Lagrange.Core\Lagrange.Core.csproj", "{5828A8A4-DE14-490A-9024-A64E8B32FC77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{278CB4BB-8232-43D7-9C8D-A43FDC5CFB47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{278CB4BB-8232-43D7-9C8D-A43FDC5CFB47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{278CB4BB-8232-43D7-9C8D-A43FDC5CFB47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{278CB4BB-8232-43D7-9C8D-A43FDC5CFB47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5828A8A4-DE14-490A-9024-A64E8B32FC77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5828A8A4-DE14-490A-9024-A64E8B32FC77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5828A8A4-DE14-490A-9024-A64E8B32FC77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5828A8A4-DE14-490A-9024-A64E8B32FC77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
