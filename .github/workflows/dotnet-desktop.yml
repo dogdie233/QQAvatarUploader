@@ -10,6 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -27,7 +31,7 @@ jobs:
       uses: actions/cache@v4
       with:
         path: Lagrange.Core/Lagrange.Core/bin
-        key: ${{ runner.os }}-Lagrange-Core-${{ steps.lagrange_core_commit.outputs.commit }}
+        key: ${{ runner.os }}-Lagrange-Core-${{ steps.lagrange_core_commit.outputs.commit }}-${{ matrix.configuration }}
 
     # Install the .NET Core workload
     - name: Install .NET Core
@@ -36,12 +40,12 @@ jobs:
         dotnet-version: 9.0.x
 
     - name: Publish the application
-      run: dotnet publish -c Debug QQAvatarUploader -r win-x64
+      run: dotnet publish -c ${{ matrix.configuration }} QQAvatarUploader -r win-x64
 
     # Upload the application: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: win-x64.exe
-        path: QQAvatarUploader/bin/Debug/net9.0/win-x64/publish/QQAvatarUploader.exe
+        name: win-x64-${{ matrix.configuration }}.exe
+        path: QQAvatarUploader/bin/${{ matrix.configuration }}/net9.0/win-x64/publish/QQAvatarUploader.exe
         
